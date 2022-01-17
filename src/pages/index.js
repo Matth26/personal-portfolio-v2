@@ -1,16 +1,31 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
-const classes = {
-  wrapper: 'p-8 bg-slate-100',
-};
+import Layout from '../layout';
 
-const Index = () => {
+const Index = ({ data }) => {
+  const { name, title, description } = data.site.siteMetadata;
   return (
-    <div className={classes.wrapper}>
-      <h1 className="text-3xl font-bold underline">Test</h1>
-      blabla
-    </div>
+    <Layout>
+      <div>
+        <h1 className="font-xs font-light ">{name}</h1>
+        <h1>{title}</h1>
+        <h1>{description}</h1>
+      </div>
+    </Layout>
   );
 };
 
 export default Index;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        name
+        title
+        description
+      }
+    }
+  }
+`;
