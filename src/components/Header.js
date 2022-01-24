@@ -8,7 +8,6 @@ const Header = () => {
         <h1 className="text-xl md:text-3xl text-gray-600">Matthias Monnier</h1>
         <div>
           <StyledLink to="/">HOME</StyledLink>
-          <StyledLink to="/about">ABOUT</StyledLink>
           <StyledLink to="/projects">PROJECTS</StyledLink>
           <StyledLink to="/resume">RÉSUMÉ</StyledLink>
         </div>
