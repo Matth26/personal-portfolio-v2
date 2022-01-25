@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const classes = {
   contentWrapper: 'p-2 w-full md:w-4/5 mx-auto',
-  outerWrapper: 'bg-sky-50 min-h-screen w-full flex flex-col justify-between',
+  outerWrapper: 'bg-slate-50 min-h-screen w-full flex flex-col justify-between',
 };
 
 const Layout = ({ children }) => {
