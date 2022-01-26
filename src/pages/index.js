@@ -51,8 +51,8 @@ const style = {
     'absolute w-full p-2.5 top-4 inset-x-0 text-center text-2xl font-semibold tracking-widest text-slate-100',
   textWrapper: 'w-full p-2.5 pt-5 bg-slate-50 relative',
   linkWrapper: 'w-full h-8 absolute inset-x-0 -top-3',
-  link: 'bg-sky-500 hover:bg-cyan-600 text-slate-100 rounded-full h-6 w-20 px-2 mx-auto flex flex-row items-center justify-center space-x-1.5',
-  linkText: 'uppercase font-light text-sm',
+  link: 'bg-sky-500 hover:bg-sky-400 text-slate-100 rounded-full h-6 w-20 px-2 mx-auto flex flex-row items-center justify-center space-x-1.5',
+  linkText: 'uppercase tracking-widest font-light text-xs',
   linkArrow: 'w-3 h-3',
   text: 'text-sm text-gray-700 text-center leading-4',
 };
