@@ -1,8 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { LocationMarkerIcon, AtSymbolIcon } from '@heroicons/react/solid';
+import {
+  LocationMarkerIcon,
+  AtSymbolIcon,
+  ArrowRightIcon,
+} from '@heroicons/react/solid';
 //import { DiGithubBadge } from 'react-icons/di/DiGithubBadge';
 import { DiGithubAlt } from '@react-icons/all-files/di/DiGithubAlt'; // DevIcon
 import { DiCss3 } from '@react-icons/all-files/di/DiCss3'; // DevIcon
@@ -40,12 +44,17 @@ const style = {
   icon: 'h-3.5 w-3.5 text-gray-800',
   iconLanguages: 'h-5 w-5 text-gray-800',
   info: 'pl-1 text-xs font-light',
-  boxWrapper:
-    'h-40 border rounded-lg shadow-sm md:basis-1/2 relative overflow-hidden',
+  boxWrapper: 'h-44 border rounded-lg shadow-sm md:basis-1/2 overflow-hidden',
+  titleAndImageWrapper: 'relative h-24',
   imageTitle: 'rounded-t-lg object-cover w-full h-full brightness-50',
   title:
     'absolute w-full p-2.5 top-4 inset-x-0 text-center text-2xl font-semibold tracking-widest text-slate-100',
-  text: 'absolute w-full p-2.5 bottom-0 inset-x-0 bg-slate-50 text-sm text-gray-700 text-center leading-4',
+  textWrapper: 'w-full p-2.5 pt-5 bg-slate-50 relative',
+  linkWrapper: 'w-full h-8 absolute inset-x-0 -top-3',
+  link: 'bg-sky-500 hover:bg-cyan-600 text-slate-100 rounded-full h-6 w-20 px-2 mx-auto flex flex-row items-center justify-center space-x-1.5',
+  linkText: 'uppercase font-light text-sm',
+  linkArrow: 'w-3 h-3',
+  text: 'text-sm text-gray-700 text-center leading-4',
 };
 
 const Index = ({ data }) => {
@@ -140,34 +149,56 @@ const Index = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex flex-row mt-4 flex-wrap md:flex-nowrap">
+      <div className="flex flex-row mt-6 flex-wrap md:flex-nowrap space-y-6 md:space-y-0 md:space-x-6">
         <div className={style.boxWrapper}>
-          <StaticImage
-            className={style.imageTitle}
-            src="../images/architecture.jpeg"
-            alt="Projects image"
-            placeholder="blurred"
-            layout="constrained"
-          />
-          <div className={style.title}>Projects</div>
-          <div className={style.text}>
-            I've worked on a number of project over the years. Each project has
-            a detailed description, and a live demo.
+          <div className={style.titleAndImageWrapper}>
+            <StaticImage
+              className={style.imageTitle}
+              src="../images/resume.jpeg"
+              alt="Résumé image"
+              placeholder="blurred"
+              layout="constrained"
+            />
+            <div className={style.title}>Résumé</div>
+          </div>
+
+          <div className={style.textWrapper}>
+            <div className={style.linkWrapper}>
+              <Link to="/resume" className={style.link}>
+                <p className={style.linkText}>Show</p>
+                <ArrowRightIcon className={style.linkArrow} />
+              </Link>
+            </div>
+            <p className={style.text}>
+              I've worked on a number of project over the years. Each project
+              has a detailed description, and a live demo.
+            </p>
           </div>
         </div>
-        <div className="h-4 md:w-4"></div>
+
         <div className={style.boxWrapper}>
-          <StaticImage
-            className={style.imageTitle}
-            src="../images/architecture.jpeg"
-            alt="Projects image"
-            placeholder="blurred"
-            layout="constrained"
-          />
-          <div className={style.title}>Projects</div>
-          <div className={style.text}>
-            I've worked on a number of project over the years. Each project has
-            a detailed description, and a live demo.
+          <div className={style.titleAndImageWrapper}>
+            <StaticImage
+              className={style.imageTitle}
+              src="../images/architecture.jpeg"
+              alt="Projects image"
+              placeholder="blurred"
+              layout="constrained"
+            />
+            <div className={style.title}>Projects</div>
+          </div>
+
+          <div className={style.textWrapper}>
+            <div className={style.linkWrapper}>
+              <Link to="/projects" className={style.link}>
+                <p className={style.linkText}>Show</p>
+                <ArrowRightIcon className={style.linkArrow} />
+              </Link>
+            </div>
+            <p className={style.text}>
+              I've worked on a number of project over the years. Each project
+              has a detailed description, and a live demo.
+            </p>
           </div>
         </div>
       </div>
