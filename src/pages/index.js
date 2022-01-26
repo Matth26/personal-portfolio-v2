@@ -81,7 +81,7 @@ const Index = ({ data }) => {
             </div>
           </div>
 
-          <div class="grid grid-cols-5 gap-2">
+          <div className="grid grid-cols-5 gap-2">
             <DiCss3 className={style.iconLanguages} />
             <DiGit className={style.iconLanguages} />
             <DiGo className={style.iconLanguages} />

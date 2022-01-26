@@ -21,9 +21,18 @@ const DynamicImage = (props) => {
   `);
 
   const edge = data.allFile.edges.find(({ node }) => src === node.relativePath);
-  const image = getImage(edge.node.childImageSharp.gatsbyImageData);
 
-  return <>{edge && <GatsbyImage image={image} alt={alt} {...props} />}</>;
+  return (
+    <>
+      {edge && (
+        <GatsbyImage
+          image={getImage(edge.node.childImageSharp.gatsbyImageData)}
+          alt={alt}
+          {...props}
+        />
+      )}
+    </>
+  );
 };
 
 export default DynamicImage;
