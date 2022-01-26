@@ -22,7 +22,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          placeholder: `blurred`,
+        },
+      },
+    },
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
 };
