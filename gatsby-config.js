@@ -18,6 +18,30 @@ module.exports = {
     about: `Hi I'm Mat, a 28 years old french developer.
     I love designing elegant solutions to complex problem. 
     I'm fascinated by the web technologies, and blockchain and crypto world.`,
+    projects: [
+      {
+        name: 'Personal Portfolio',
+        imageSrc: 'projects.jpeg',
+        description:
+          'Blazing fast Portfolio built from scratch with GatsbyJs and TailwindCSS',
+        link: 'https://github.com/RyanFitzgerald/devfolio',
+        tools: 'Gatsby V2, React, TailwindCSS, PostCSS',
+      },
+      {
+        name: 'Personal Portfolio 2',
+        imageSrc: 'projects.jpeg',
+        description:
+          'Blazing fast personal site built from scratch with GatsbyJs and TailwindCSS',
+        link: 'https://github.com/RyanFitzgerald/devfolio',
+      },
+      {
+        name: 'Personal Portfolio 3',
+        imageSrc: 'resume.jpeg',
+        description:
+          'Blazing fast personal site built from scratch with GatsbyJs and TailwindCSS',
+        link: 'https://github.com/RyanFitzgerald/devfolio',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-postcss`,
