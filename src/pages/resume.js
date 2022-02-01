@@ -3,9 +3,11 @@ import { graphql } from 'gatsby';
 
 import ListOfSkills from '../components/ListOfSkills';
 import ListOfWorkExperiences from '../components/ListOfWorkExperiences';
+import ListOfEducations from '../components/ListOfEducations';
 
 const style = {
-  title: 'font-light text-3xl text-gray-800 border-b pb-2 mb-2',
+  title:
+    'font-light text-3xl text-gray-800 border-b border-slate-300 pb-2 mb-2 tracking-wide mb-4',
 };
 
 const ResumePage = ({ data }) => {
@@ -19,16 +21,17 @@ const ResumePage = ({ data }) => {
       </div>
 
       <div>
-        <h1 className={style.title}>Projects</h1>
+        <h1 className={style.title}>Education</h1>
+        <ListOfEducations educations={data.site.siteMetadata.educations} />
       </div>
 
-      <div>
+      <div className="col-span-2">
         <h1 className={style.title}>Technical Skills</h1>
         <ListOfSkills skills={data.site.siteMetadata.skills} />
       </div>
 
       <div>
-        <h1 className={style.title}>Education</h1>
+        <h1 className={style.title}>Projects</h1>
       </div>
 
       <div>
@@ -44,7 +47,11 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        skills
+        skills {
+          category
+          name
+          rate
+        }
         workExperiences {
           title
           dates
@@ -56,6 +63,12 @@ export const pageQuery = graphql`
             tag
           }
           post
+        }
+        educations {
+          school
+          title
+          dates
+          description
         }
       }
     }
