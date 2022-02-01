@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import ListOfSkills from '../components/ListOfSkills';
 import ListOfWorkExperiences from '../components/ListOfWorkExperiences';
 import ListOfEducations from '../components/ListOfEducations';
+import ListOfProjects from '../components/ListOfProjects';
 
 const style = {
   title:
@@ -12,8 +13,8 @@ const style = {
 
 const ResumePage = ({ data }) => {
   return (
-    <div className="grid grid-cols-2 gap-8">
-      <div>
+    <div className="pt-2 grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 xl:gap-8">
+      <div className="lg:row-span-2">
         <h1 className={style.title}>Work Experience</h1>
         <ListOfWorkExperiences
           workExperiences={data.site.siteMetadata.workExperiences}
@@ -25,17 +26,21 @@ const ResumePage = ({ data }) => {
         <ListOfEducations educations={data.site.siteMetadata.educations} />
       </div>
 
-      <div className="col-span-2">
+      <div>
+        <h1 className={style.title}>Activities</h1>
+        <div className="text-xs font-light">blablal blabla ablabl</div>
+        <div className="text-xs font-light">blablal blabla ablabl</div>
+        <div className="text-xs font-light">blablal blabla ablabl</div>
+      </div>
+
+      <div className="lg:col-span-2">
         <h1 className={style.title}>Technical Skills</h1>
         <ListOfSkills skills={data.site.siteMetadata.skills} />
       </div>
 
-      <div>
+      <div className="lg:col-span-2">
         <h1 className={style.title}>Projects</h1>
-      </div>
-
-      <div>
-        <h1 className={style.title}>Activities</h1>
+        <ListOfProjects projects={data.site.siteMetadata.projects} />
       </div>
     </div>
   );
@@ -47,6 +52,13 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        projects {
+          name
+          imageSrc
+          description
+          link
+          tools
+        }
         skills {
           category
           name

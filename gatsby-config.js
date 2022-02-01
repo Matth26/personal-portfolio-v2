@@ -25,7 +25,7 @@ module.exports = {
         description:
           'Blazing fast Portfolio built from scratch with GatsbyJs and TailwindCSS',
         link: 'https://github.com/RyanFitzgerald/devfolio',
-        tools: 'Gatsby V2, React, TailwindCSS, PostCSS',
+        tools: 'Gatsby, React, TailwindCSS, PostCSS',
       },
       {
         name: 'Personal Portfolio 2',
@@ -33,6 +33,7 @@ module.exports = {
         description:
           'Blazing fast personal site built from scratch with GatsbyJs and TailwindCSS',
         link: 'https://github.com/RyanFitzgerald/devfolio',
+        tools: 'Gatsby, React, TailwindCSS, PostCSS',
       },
       {
         name: 'Personal Portfolio 3',
@@ -40,6 +41,7 @@ module.exports = {
         description:
           'Blazing fast personal site built from scratch with GatsbyJs and TailwindCSS',
         link: 'https://github.com/RyanFitzgerald/devfolio',
+        tools: 'Gatsby, React, TailwindCSS, PostCSS',
       },
     ],
     skills: [
@@ -107,7 +109,7 @@ module.exports = {
     workExperiences: [
       {
         title: 'Software Architect and R&D lead',
-        dates: '2020 - 2021',
+        dates: '2020-2021',
         contract: 'CDI',
         duration: '1y 8m',
         entreprise: {
@@ -119,7 +121,7 @@ module.exports = {
       },
       {
         title: 'Développeur R&D',
-        dates: '2016 - 2020',
+        dates: '2016-2020',
         contract: 'CDI',
         duration: '3y 5m',
         entreprise: {
@@ -134,13 +136,13 @@ module.exports = {
       {
         school: 'Polytech Montpellier',
         title: 'Microélectronique et Automatique',
-        dates: '2013 - 2016',
+        dates: '2013-2016',
         description: 'Spécialité: Robotique',
       },
       {
         school: 'Faculté de Science de Montpellier',
         title: 'Classe préparatoire intégrée (PEIP)',
-        dates: '2011 - 2013',
+        dates: '2011-2013',
         description: 'Classe préparatoire intégrée à Polytech Montpellier',
       },
     ],

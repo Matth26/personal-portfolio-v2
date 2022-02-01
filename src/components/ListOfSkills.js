@@ -4,22 +4,24 @@ import Rating from './Rating';
 
 const ListOfSkills = ({ skills }) => {
   return (
-    <div className="grid grid-cols-2 gap-y-0.5 gap-x-8 px-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-0.5 gap-x-2 md:gap-x-4 xl:gap-x-8 px-2">
       {skills.map((skill) => (
         <div className="flex flex-row">
           <div className="flex flex-row basis-4/12 items-start">
-            <div className="font-medium text-xs py-1 uppercase shrink-0">
+            <div className="font-medium text-xs py-1 uppercase shrink-0 text-gray-800">
               {skill.category}
             </div>
             <div className="border-t w-full mt-3 ml-4"></div>
           </div>
 
           <div className="flex flex-row pl-4 basis-7/12 items-start">
-            <div className="font-light text-sm shrink-0">{skill.name}</div>
-            <div className="border-t w-full mt-3 ml-4 mr-4"></div>
+            <div className="font-light text-sm shrink-0 text-gray-700">
+              {skill.name}
+            </div>
+            <div className="hidden sm:block border-t w-full mt-3 ml-4 mr-4"></div>
           </div>
 
-          <div className="basis-1/12 items-end">
+          <div className="basis-1/12 hidden sm:block items-end">
             <div className="font-light text-xs py-1">
               {<Rating rate={skill.rate} className="text-gray-700" />}
             </div>

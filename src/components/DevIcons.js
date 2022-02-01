@@ -35,9 +35,13 @@ import { SiEslint } from '@react-icons/all-files/si/SiEslint';
 import { SiPrettier } from '@react-icons/all-files/si/SiPrettier';
 import { SiTypescript } from '@react-icons/all-files/si/SiTypescript';
 import { SiArchlinux } from '@react-icons/all-files/si/SiTypescript';
+import { SiTailwindcss } from '@react-icons/all-files/si/SiTailwindcss';
+import { SiGatsby } from '@react-icons/all-files/si/SiGatsby';
+import { SiPostcss } from '@react-icons/all-files/si/SiPostcss';
 
 // Ant Design Icons
 import { AiFillAndroid } from '@react-icons/all-files/ai/AiFillAndroid';
+import { AiFillQuestionCircle } from '@react-icons/all-files/ai/AiFillQuestionCircle';
 
 const DevIcons = ({ name, className }) => {
   let style = className ? className : 'w-5 h-5';
@@ -89,8 +93,16 @@ const DevIcons = ({ name, className }) => {
             return <DiReact className={style} />;
           case 'redux':
             return <SiRedux className={style} />;
+          case 'tailwindcss':
+            return <SiTailwindcss className={style} />;
+          case 'gatsby':
+            return <SiGatsby className={style} />;
+          case 'postcss':
+            return <SiPostcss className={style} />;
           default:
-            return null;
+            return (
+              <AiFillQuestionCircle className={style + ' text-rose-600'} />
+            );
         }
       })()}
     </>
