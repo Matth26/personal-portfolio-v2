@@ -28,9 +28,9 @@ const ResumePage = ({ data }) => {
 
       <div>
         <h1 className={style.title}>Activities</h1>
-        <div className="text-xs font-light">blablal blabla ablabl</div>
-        <div className="text-xs font-light">blablal blabla ablabl</div>
-        <div className="text-xs font-light">blablal blabla ablabl</div>
+        <div className="text-sm font-light">Reading book - See my Booklist</div>
+        <div className="text-sm font-light">Ski</div>
+        <div className="text-sm font-light">blablal blabla ablabl</div>
       </div>
 
       <div className="lg:col-span-2">

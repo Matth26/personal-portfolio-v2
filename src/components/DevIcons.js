@@ -23,11 +23,11 @@ import { DiVim } from '@react-icons/all-files/di/DiVim';
 import { DiVisualstudio } from '@react-icons/all-files/di/DiVisualstudio';
 import { DiW3C } from '@react-icons/all-files/di/DiW3C';
 import { DiReact } from '@react-icons/all-files/di/DiReact';
-import { DiPython } from '@react-icons/all-files/di/Dipython';
+//import { DiPython } from '@react-icons/all-files/di/Dipython';
 
 // Simple Icons
 import { SiRedux } from '@react-icons/all-files/si/SiRedux';
-import { SiGnuBash } from '@react-icons/all-files/si/SiGnuBash';
+//import { SiGnuBash } from '@react-icons/all-files/si/SiGnuBash';
 import { SiC } from '@react-icons/all-files/si/SiC';
 import { SiCplusplus } from '@react-icons/all-files/si/SiCplusplus';
 import { SiGit } from '@react-icons/all-files/si/SiRedux';
