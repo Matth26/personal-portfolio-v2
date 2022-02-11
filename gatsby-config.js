@@ -11,10 +11,10 @@ module.exports = {
     projects: [
       {
         name: 'Personal Portfolio',
-        imageSrc: 'projects.jpeg',
+        imageSrc: 'personal-portfolio.png',
         description:
           'Blazing fast Portfolio built from scratch with GatsbyJs and TailwindCSS',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        link: 'https://github.com/',
         tools: 'Gatsby, React, TailwindCSS, PostCSS',
       },
       {
@@ -22,12 +22,12 @@ module.exports = {
         imageSrc: 'projects.jpeg',
         description:
           'React dashboard for managing multiple data stations (Raspberry Pi)',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        link: 'https://github.com/',
         tools: 'React, Redux, SocketIO, C, Raspberry Pi',
       },
       {
         name: 'Travian Automated Google Sheet',
-        imageSrc: 'projects.jpeg',
+        imageSrc: 'travian-sheet.png',
         description:
           'Colaborative Sheet for Travian game scripted with Google App Script',
         link: 'https://github.com/Matth26/gap-travian-deff',
@@ -35,9 +35,9 @@ module.exports = {
       },
       {
         name: 'Showcase website with DatoCMS',
-        imageSrc: 'resume.jpeg',
+        imageSrc: 'charousse.png',
         description: 'Blazing fast showcase website, data stored on DatoCMS',
-        link: 'https://github.com/Matth26/charousse',
+        link: 'https://www.charousse.fr/',
         tools: 'Gatsby, React, DatoCMS',
       },
     ],

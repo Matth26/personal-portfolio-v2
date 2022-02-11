@@ -7,7 +7,7 @@ import DynamicImage from './DynamicImage';
 import DevIcons from './DevIcons';
 
 const style = {
-  boxWrapper: 'h-56 border rounded-lg shadow-sm md:basis-1/2 overflow-hidden',
+  boxWrapper: 'h-44 border rounded-lg shadow-sm md:basis-1/2 overflow-hidden',
   titleAndImageWrapper: 'relative h-24',
   imageTitle: 'rounded-t-lg object-cover w-full h-full brightness-50',
   title:

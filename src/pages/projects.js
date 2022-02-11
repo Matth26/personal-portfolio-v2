@@ -21,7 +21,7 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <>
-      <div className="border rounded-lg p-4 mt-4 shadow-sm flex flex-col items-left space-y-4">
+      <div className="border rounded-lg p-4 shadow-sm flex flex-col items-left space-y-4">
         <h1 className="font-bold tracking-widest text-gray-800 text-5xl uppercase self-center">
           Projects
         </h1>
