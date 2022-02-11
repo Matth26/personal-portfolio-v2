@@ -15,7 +15,7 @@ module.exports = {
         description:
           'Blazing fast Portfolio built from scratch with GatsbyJs and TailwindCSS',
         link: 'https://github.com/',
-        tools: 'Gatsby, React, TailwindCSS, PostCSS',
+        tools: 'Gatsby, React, TailwindCSS, PostCSS, Netlify',
       },
       {
         name: 'Sensor Stations Dashboard',
@@ -38,7 +38,7 @@ module.exports = {
         imageSrc: 'charousse.png',
         description: 'Blazing fast showcase website, data stored on DatoCMS',
         link: 'https://www.charousse.fr/',
-        tools: 'Gatsby, React, DatoCMS',
+        tools: 'Gatsby, React, Netlify', //DatoCMS
       },
     ],
 

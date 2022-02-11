@@ -45,6 +45,7 @@ import { SiReact } from '@react-icons/all-files/si/SiReact';
 import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
 import { SiSocketDotIo } from '@react-icons/all-files/si/SiSocketDotIo';
 import { SiRaspberrypi } from '@react-icons/all-files/si/SiRaspberrypi';
+import { SiNetlify } from '@react-icons/all-files/si/SiNetlify';
 
 // Ant Design Icons
 import { AiFillAndroid } from '@react-icons/all-files/ai/AiFillAndroid';
@@ -52,8 +53,6 @@ import { AiFillQuestionCircle } from '@react-icons/all-files/ai/AiFillQuestionCi
 
 const DevIcons = ({ name, className }) => {
   let style = className ? className : 'w-5 h-5';
-  console.log(className);
-  console.log(style);
   return (
     <>
       {(() => {
@@ -118,6 +117,8 @@ const DevIcons = ({ name, className }) => {
             return <SiC className={style} />;
           case 'raspberrypi':
             return <SiRaspberrypi className={style} />;
+          case 'netlify':
+            return <SiNetlify className={style} />;
           default:
             return (
               <AiFillQuestionCircle className={style + ' text-rose-600'} />
