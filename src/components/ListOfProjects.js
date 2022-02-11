@@ -25,12 +25,14 @@ const ListOfProjects = ({ projects }) => {
             <div className="font-medium text-sm py-1 uppercase text-gray-800">
               {project.name}
             </div>
-            <div className="flex flex-row space-x-2">
-              {displayLogos(project)}
+            <div className="flex flex-row space-x-6">
+              <div className="flex flex-row space-x-2">
+                {displayLogos(project)}
+              </div>
+              <a href={project.link} target="_blank">
+                <FiExternalLink className="opacity-50 hover:opacity-100" />
+              </a>
             </div>
-            <a href={project.link} target="_blank">
-              <FiExternalLink className="text-gray-800" />
-            </a>
           </div>
 
           <div className="flex flex-col space-y-1">

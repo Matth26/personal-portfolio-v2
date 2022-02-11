@@ -3,30 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { LocationMarkerIcon, AtSymbolIcon } from '@heroicons/react/solid';
-//import { DiGithubBadge } from 'react-icons/di/DiGithubBadge';
 import { DiGithubAlt } from '@react-icons/all-files/di/DiGithubAlt'; // DevIcon
-import { DiCss3 } from '@react-icons/all-files/di/DiCss3'; // DevIcon
-import { DiGit } from '@react-icons/all-files/di/DiGit'; // DevIcon
-import { DiGo } from '@react-icons/all-files/di/DiGo'; // DevIcon
-import { DiHtml5 } from '@react-icons/all-files/di/DiHtml5'; // DevIcon
-import { DiHeroku } from '@react-icons/all-files/di/DiHeroku'; // DevIcon
-import { DiJsBadge } from '@react-icons/all-files/di/DiJsBadge'; // DevIcon
-import { DiLinux } from '@react-icons/all-files/di/DiLinux'; // DevIcon
-import { DiMarkdown } from '@react-icons/all-files/di/DiMarkdown'; // DevIcon
-import { DiMongodb } from '@react-icons/all-files/di/DiMongodb'; // DevIcon
-import { DiNodejsSmall } from '@react-icons/all-files/di/DiNodejsSmall'; // DevIcon
-import { DiNpm } from '@react-icons/all-files/di/DiNpm'; // DevIcon
-import { DiPostgresql } from '@react-icons/all-files/di/DiPostgresql'; // DevIcon
-import { DiScriptcs } from '@react-icons/all-files/di/DiScriptcs'; // DevIcon
-
-import { DiStackoverflow } from '@react-icons/all-files/di/DiStackoverflow'; // DevIcon
-import { DiTerminal } from '@react-icons/all-files/di/DiTerminal'; // DevIcon
-import { DiUbuntu } from '@react-icons/all-files/di/DiUbuntu'; // DevIcon
-import { DiVim } from '@react-icons/all-files/di/DiVim'; // DevIcon
-import { DiVisualstudio } from '@react-icons/all-files/di/DiVisualstudio'; // DevIcon
-import { DiW3C } from '@react-icons/all-files/di/DiW3C'; // DevIcon
-import { DiReact } from '@react-icons/all-files/di/DiReact'; // DevIcon
-
 import { AiFillLinkedin } from '@react-icons/all-files/ai/AiFillLinkedin'; // Ant Design Icons
 
 import CategoryBox from '../components/CategoryBox';
@@ -42,10 +19,12 @@ const style = {
   icon: 'h-3.5 w-3.5 text-gray-800',
   iconLanguages: 'h-5 w-5 text-gray-800',
   info: 'pl-1 text-xs font-light',
+  link: 'opacity-50 hover:opacity-100',
 };
 
 const Index = ({ data }) => {
-  const { name, title, description } = data.site.siteMetadata;
+  const { name, title, description, github, linkedin, email } =
+    data.site.siteMetadata;
   return (
     <>
       <div className="border rounded-lg p-4 mt-4 shadow-sm flex flex-wrap md:flex-nowrap justify-center">
@@ -69,39 +48,20 @@ const Index = ({ data }) => {
             </div>
             <div className="flex items-center pb-1">
               <AtSymbolIcon className={style.icon} />
-              <p className={style.info}>matthias.monnier@gmail.com</p>
+              <p className={style.info}>{email}</p>
             </div>
             <div className="flex items-center pb-1">
               <DiGithubAlt className={style.icon} />
-              <p className={style.info}>github.com/Matth26</p>
+              <a href={github} target="_blank" className={style.link}>
+                <p className={style.info}>{github.replace('https://', '')}</p>
+              </a>
             </div>
             <div className="flex items-center">
               <AiFillLinkedin className={style.icon} />
-              <p className={style.info}>linkedin.com/in/matthiasmonnier</p>
+              <a href={linkedin} target="_blank" className={style.link}>
+                <p className={style.info}>{linkedin.replace('https://', '')}</p>
+              </a>
             </div>
-          </div>
-
-          <div className="grid grid-cols-5 gap-2">
-            <DiCss3 className={style.iconLanguages} />
-            <DiGit className={style.iconLanguages} />
-            <DiGo className={style.iconLanguages} />
-            <DiHeroku className={style.iconLanguages} />
-            <DiHtml5 className={style.iconLanguages} />
-            <DiJsBadge className={style.iconLanguages} />
-            <DiLinux className={style.iconLanguages} />
-            <DiMarkdown className={style.iconLanguages} />
-            <DiMongodb className={style.iconLanguages} />
-            <DiNodejsSmall className={style.iconLanguages} />
-            <DiNpm className={style.iconLanguages} />
-            <DiPostgresql className={style.iconLanguages} />
-            <DiScriptcs className={style.iconLanguages} />
-            <DiStackoverflow className={style.iconLanguages} />
-            <DiTerminal className={style.iconLanguages} />
-            <DiUbuntu className={style.iconLanguages} />
-            <DiVim className={style.iconLanguages} />
-            <DiVisualstudio className={style.iciconLanguageson} />
-            <DiW3C className={style.iconLanguages} />
-            <DiReact className={style.iconLanguages} />
           </div>
         </div>
 
@@ -147,7 +107,7 @@ const Index = ({ data }) => {
           src="resume.jpeg"
           alt="Résumé image"
           title="Résumé"
-          text="I've worked on a number of project over the years. Each project has a detailed description, and a live demo."
+          text="Here is my online résumé. Have a look at my skillset, projects, interests and work experiences."
         />
       </div>
     </>
@@ -163,6 +123,9 @@ export const pageQuery = graphql`
         name
         title
         description
+        github
+        linkedin
+        email
       }
     }
   }

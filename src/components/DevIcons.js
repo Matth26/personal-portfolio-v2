@@ -9,7 +9,7 @@ import { DiGit } from '@react-icons/all-files/di/DiGit';
 import { DiGo } from '@react-icons/all-files/di/DiGo';
 import { DiHtml5 } from '@react-icons/all-files/di/DiHtml5';
 import { DiHeroku } from '@react-icons/all-files/di/DiHeroku';
-import { DiJsBadge } from '@react-icons/all-files/di/DiJsBadge';
+//import { DiJsBadge } from '@react-icons/all-files/di/DiJsBadge';
 import { DiLinux } from '@react-icons/all-files/di/DiLinux';
 import { DiMarkdown } from '@react-icons/all-files/di/DiMarkdown';
 import { DiMongodb } from '@react-icons/all-files/di/DiMongodb';
@@ -22,7 +22,7 @@ import { DiUbuntu } from '@react-icons/all-files/di/DiUbuntu';
 import { DiVim } from '@react-icons/all-files/di/DiVim';
 import { DiVisualstudio } from '@react-icons/all-files/di/DiVisualstudio';
 import { DiW3C } from '@react-icons/all-files/di/DiW3C';
-import { DiReact } from '@react-icons/all-files/di/DiReact';
+//import { DiReact } from '@react-icons/all-files/di/DiReact';
 //import { DiPython } from '@react-icons/all-files/di/Dipython';
 
 // Simple Icons
@@ -38,6 +38,13 @@ import { SiArchlinux } from '@react-icons/all-files/si/SiTypescript';
 import { SiTailwindcss } from '@react-icons/all-files/si/SiTailwindcss';
 import { SiGatsby } from '@react-icons/all-files/si/SiGatsby';
 import { SiPostcss } from '@react-icons/all-files/si/SiPostcss';
+//import { SiDatocms } from '@react-icons/all-files/si/SiDatocms';
+import { SiGoogledrive } from '@react-icons/all-files/si/SiGoogledrive';
+import { SiGooglesheets } from '@react-icons/all-files/si/SiGooglesheets';
+import { SiReact } from '@react-icons/all-files/si/SiReact';
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
+import { SiSocketDotIo } from '@react-icons/all-files/si/SiSocketDotIo';
+import { SiRaspberrypi } from '@react-icons/all-files/si/SiRaspberrypi';
 
 // Ant Design Icons
 import { AiFillAndroid } from '@react-icons/all-files/ai/AiFillAndroid';
@@ -64,7 +71,7 @@ const DevIcons = ({ name, className }) => {
           case 'heroku':
             return <DiHeroku className={style} />;
           case 'js':
-            return <DiJsBadge className={style} />;
+            return <SiJavascript className={style} />;
           case 'linux':
             return <DiLinux className={style} />;
           case 'markdown':
@@ -90,7 +97,7 @@ const DevIcons = ({ name, className }) => {
           case 'vscode':
             return <DiVisualstudio className={style} />;
           case 'react':
-            return <DiReact className={style} />;
+            return <SiReact className={style} />;
           case 'redux':
             return <SiRedux className={style} />;
           case 'tailwindcss':
@@ -99,6 +106,18 @@ const DevIcons = ({ name, className }) => {
             return <SiGatsby className={style} />;
           case 'postcss':
             return <SiPostcss className={style} />;
+          /*case 'datocms':
+            return <SiDatocms className={style} />;*/
+          case 'googledrive':
+            return <SiGoogledrive className={style} />;
+          case 'googlesheet':
+            return <SiGooglesheets className={style} />;
+          case 'socketio':
+            return <SiSocketDotIo className={style} />;
+          case 'c':
+            return <SiC className={style} />;
+          case 'raspberrypi':
+            return <SiRaspberrypi className={style} />;
           default:
             return (
               <AiFillQuestionCircle className={style + ' text-rose-600'} />

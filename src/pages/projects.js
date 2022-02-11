@@ -4,9 +4,7 @@ import { graphql } from 'gatsby';
 import Project from '../components/Project';
 
 const ProjectsPage = ({ data }) => {
-  console.log(data);
-  const projects = data.site.siteMetadata.projects;
-  console.log(projects);
+  const { projects, github } = data.site.siteMetadata;
 
   const showProjects = () =>
     projects.map((p) => (
@@ -24,7 +22,7 @@ const ProjectsPage = ({ data }) => {
   return (
     <>
       <div className="border rounded-lg p-4 mt-4 shadow-sm flex flex-col items-left space-y-4">
-        <h1 className="font-bold tracking-widest text-5xl uppercase self-center">
+        <h1 className="font-bold tracking-widest text-gray-800 text-5xl uppercase self-center">
           Projects
         </h1>
         <p className="font-light leading-relaxed">
@@ -34,7 +32,15 @@ const ProjectsPage = ({ data }) => {
           yet.
         </p>
         <p className="font-light leading-relaxed">
-          The code for many of my projects is available on my GitHub profile.
+          The code for many of my projects is available on my{' '}
+          <a
+            href={github}
+            target="_blank"
+            className="opacity-50 hover:opacity-100"
+          >
+            GitHub profile
+          </a>
+          .
         </p>
       </div>
 
@@ -51,6 +57,7 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        github
         projects {
           name
           imageSrc

@@ -38,9 +38,7 @@ const Project = ({ imageSrc, imageAlt, description, title, link, tools }) => {
           layout="constrained"
         />
         <div className={style.title}>{title}</div>
-        <div className={style.subTitle}>
-          <DevIcons name="react" />
-        </div>
+        <div className={style.subTitle}></div>
       </div>
 
       <div className={style.textWrapper}>

@@ -5,6 +5,7 @@ import ListOfSkills from '../components/ListOfSkills';
 import ListOfWorkExperiences from '../components/ListOfWorkExperiences';
 import ListOfEducations from '../components/ListOfEducations';
 import ListOfProjects from '../components/ListOfProjects';
+import ListOfActivities from '../components/ListOfActivities';
 
 const style = {
   title:
@@ -28,9 +29,7 @@ const ResumePage = ({ data }) => {
 
       <div>
         <h1 className={style.title}>Activities</h1>
-        <div className="text-sm font-light">Reading book - See my Booklist</div>
-        <div className="text-sm font-light">Ski</div>
-        <div className="text-sm font-light">blablal blabla ablabl</div>
+        <ListOfActivities activities={data.site.siteMetadata.activities} />
       </div>
 
       <div className="lg:col-span-2">
@@ -59,6 +58,7 @@ export const pageQuery = graphql`
           link
           tools
         }
+        activities
         skills {
           category
           name

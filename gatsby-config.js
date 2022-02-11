@@ -1,23 +1,13 @@
 module.exports = {
   siteMetadata: {
-    // Main Site Title
     title: `Matthias Monnier Portfolio`,
-    // Site URL for when it goes live
     siteUrl: `https://matthiasmonnier.com`,
-    // Your Name
     name: 'Matthias Monnier',
-    // Description that goes under your name in main bio
     description: `Full-Stack Developer - Freelance`,
-    // Optional: Twitter account handle
-    author: ``,
-    // Optional: Github account URL
-    github: ``,
-    // Optional: LinkedIn account URL
-    linkedin: ``,
-    // Content of the About Me section
-    about: `Hi I'm Mat, a 28 years old french developer.
-    I love designing elegant solutions to complex problem. 
-    I'm fascinated by web technologies, blockchain and crypto world.`,
+    email: `matthias.monnier@gmail.com`,
+    github: `https://github.com/Matth26`,
+    linkedin: `https://fr.linkedin.com/in/matthiasmonnier`,
+
     projects: [
       {
         name: 'Personal Portfolio',
@@ -28,22 +18,37 @@ module.exports = {
         tools: 'Gatsby, React, TailwindCSS, PostCSS',
       },
       {
+        name: 'Sensor Stations Dashboard',
+        imageSrc: 'projects.jpeg',
+        description:
+          'React dashboard for managing multiple data stations (Raspberry Pi)',
+        link: 'https://github.com/RyanFitzgerald/devfolio',
+        tools: 'React, Redux, SocketIO, C, Raspberry Pi',
+      },
+      {
         name: 'Travian Automated Google Sheet',
         imageSrc: 'projects.jpeg',
         description:
-          'Colaborative Google Sheet for Travian game automated with google app script',
+          'Colaborative Sheet for Travian game scripted with Google App Script',
         link: 'https://github.com/Matth26/gap-travian-deff',
-        tools: 'Google Sheet, Google App Script',
+        tools: 'Google Sheet, Google Drive, Js',
       },
       {
         name: 'Showcase website with DatoCMS',
         imageSrc: 'resume.jpeg',
-        description:
-          'Blazing fast showcase website, data stored on DatoCMS',
+        description: 'Blazing fast showcase website, data stored on DatoCMS',
         link: 'https://github.com/Matth26/charousse',
         tools: 'Gatsby, React, DatoCMS',
       },
     ],
+
+    activities: [
+      'Reading self-help books',
+      'Ren Xue Qigong',
+      'DIY projects',
+      'Bike',
+    ],
+
     skills: [
       {
         category: 'Web Tools',
@@ -106,22 +111,26 @@ module.exports = {
         rate: 4.0,
       },
     ],
+
     workExperiences: [
       {
-        title: 'Software Architect and R&D lead',
+        title: 'Software Architect and Head of R&D',
         dates: '2020-2021',
         contract: 'Permanent Contract',
         duration: '1y 8m',
         entreprise: {
           name: 'KeyInfuser',
           location: 'Sophia Antipolis (06), France',
-          tag: 'Robotic startup building innovative solution for retail',
+          tag: 'Robotic startup building innovative solution for international retail',
         },
-				post: ['In charge of the conception, developement, tests and deployement of the embedded software of the robot and its web interface.', 'In charge of the R&D department.'],
+        post: [
+          'In charge of the whole lifecycle of the robot software and its web interface: conception, developement, tests, deployement and maintenance.',
+          'In charge of the R&D department.',
+        ],
         //post: 'Responsable conception, developpement, tests et déploiement du logiciel embarqué du robot et de sa platforme web. Responsable Recherche et Developpmement sur le demonstrateur robotisé',
       },
       {
-        title: 'Développeur R&D',
+        title: 'R&D developer',
         dates: '2016-2020',
         contract: 'Permanent Contract',
         duration: '3y 5m',
@@ -129,26 +138,34 @@ module.exports = {
           name: 'KeyInfuser',
           location: 'Sophia Antipolis (06), France',
           //tag: 'Startup de conception et développement de solutions innovantes pour le retail',
-					tag: 'Robotic startup building innovative solution for retail',
+          tag: 'Robotic startup building innovative solution for international retail',
         },
-        post: ['Responsable conception, developpement, tests et déploiement du logiciel embarqué du robot et de sa platforme web. Responsable Recherche et Developpmement sur le demonstrateur robotisé'],
+        post: [
+          'Developement and maintenance of the embedded software of the robot.',
+          'In charge of the creation of custom software for each client, test, deployement and maintenance.',
+        ],
       },
     ],
+
     educations: [
       {
         school: 'Polytech Montpellier',
-        title: 'Microélectronique et Automatique',
+        title: 'Microelectronic and Automation',
         dates: '2013-2016',
-        description: ['Spécialité: Robotique', 'Semester abroad in Norway - NTNU'],
+        description: [
+          'Speciality: Robotic - Embedded systems',
+          'Semester abroad at the Norwegian University of Science and Technology (NTNU), Norway',
+        ],
       },
       {
-        school: 'Faculté de Science de Montpellier',
-        title: 'Classe préparatoire intégrée (PEIP)',
+        school: 'University of Sciences of Montpellier',
+        title: 'Preparatory Class',
         dates: '2011-2013',
-        description: ['Classe préparatoire intégrée à Polytech Montpellier'],
+        description: ['Preparatory class of Polytech Montpellier (PEIP)'],
       },
     ],
   },
+
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
