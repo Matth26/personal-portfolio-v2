@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListOfWorkExperiences = ({ workExperiences }) => {
   return (
-    <div className="grid grid-cols-1 space-y-4">
+    <div className="grid grid-cols-1 space-y-4 px-1 md:px-2">
       {workExperiences.map((exp) => (
         <div className="flex flex-row">
           <div className="flex flex-col pr-2 basis-1/6 items-end ">

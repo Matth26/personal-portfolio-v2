@@ -7,13 +7,14 @@ import DynamicImage from './DynamicImage';
 import DevIcons from './DevIcons';
 
 const style = {
-  boxWrapper: 'h-44 border rounded-lg shadow-sm md:basis-1/2 overflow-hidden',
+  boxWrapper:
+    'h-48 md:h-44 border rounded-lg shadow-sm md:basis-1/2 overflow-hidden',
   titleAndImageWrapper: 'relative h-24',
   imageTitle: 'rounded-t-lg object-cover w-full h-full brightness-50',
   title:
-    'absolute w-full p-2.5 top-4 inset-x-0 text-center text-2xl font-semibold tracking-widest text-slate-100',
+    'absolute w-full p-2.5 top-4 inset-x-0 text-center text-2xl font-semibold  leading-none tracking-wider md:tracking-widest text-slate-100',
   subTitle:
-    'absolute w-full p-2.5 top-14 inset-x-0 text-center text-xs font-semibold tracking-widest text-slate-100',
+    'absolute w-full p-2.5 top-14 inset-x-0 text-center text-xs font-semibold tracking-wider md:tracking-widest text-slate-100',
   textWrapper: 'w-full p-2.5 pt-5 bg-slate-50 relative',
   linkWrapper: 'w-full h-8 absolute inset-x-0 -top-3',
   link: 'bg-sky-500 hover:bg-sky-400 text-slate-100 rounded-full h-6 w-32 px-2 mx-auto flex flex-row items-center justify-center space-x-1.5',
@@ -38,7 +39,6 @@ const Project = ({ imageSrc, imageAlt, description, title, link, tools }) => {
           layout="constrained"
         />
         <div className={style.title}>{title}</div>
-        <div className={style.subTitle}></div>
       </div>
 
       <div className={style.textWrapper}>

@@ -4,7 +4,7 @@ import Rating from './Rating';
 
 const ListOfSkills = ({ skills }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-0.5 gap-x-2 md:gap-x-4 xl:gap-x-8 px-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-0.5 gap-x-2 md:gap-x-4 xl:gap-x-8 px-1 md:px-2">
       {skills.map((skill) => (
         <div className="flex flex-row">
           <div className="flex flex-row basis-4/12 items-start">

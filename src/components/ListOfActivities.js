@@ -4,7 +4,7 @@ import { RiArrowDropRightLine } from '@react-icons/all-files/ri/RiArrowDropRight
 
 const ListOfActivities = ({ activities }) => {
   return (
-    <div className="grid grid-cols-2 pl-4">
+    <div className="grid grid-cols-2 px-1 md:px-2">
       {activities.map((activity) => (
         <div className="flex flex-row space-x-1 items-center">
           <RiArrowDropRightLine className="" />

@@ -22,7 +22,7 @@ const ProjectsPage = ({ data }) => {
   return (
     <>
       <div className="border rounded-lg p-4 shadow-sm flex flex-col items-left space-y-4">
-        <h1 className="font-bold tracking-widest text-gray-800 text-5xl uppercase self-center">
+        <h1 className="font-bold tracking-wider md:tracking-widest text-gray-800 text-5xl uppercase self-center">
           Projects
         </h1>
         <p className="font-light leading-relaxed">

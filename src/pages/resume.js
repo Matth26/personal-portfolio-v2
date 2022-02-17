@@ -9,12 +9,12 @@ import ListOfActivities from '../components/ListOfActivities';
 
 const style = {
   title:
-    'font-light text-3xl text-gray-800 border-b border-slate-300 pb-2 mb-2 tracking-wide mb-4',
+    'font-light text-3xl text-gray-800 border-b border-slate-300 pb-1 mb-2 md:pb-2 md:mb-4 tracking-wide',
 };
 
 const ResumePage = ({ data }) => {
   return (
-    <div className="pt-2 grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 xl:gap-8">
+    <div className="pt-2 grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4 xl:gap-8">
       <div className="lg:row-span-2">
         <h1 className={style.title}>Work Experience</h1>
         <ListOfWorkExperiences

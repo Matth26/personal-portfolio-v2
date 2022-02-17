@@ -15,7 +15,7 @@ function age(dob) {
 }
 
 const style = {
-  p: 'font-light leading-relaxed pb-4',
+  p: 'font-light leading-normal md:leading-relaxed pb-2 md:pb-4',
   icon: 'h-3.5 w-3.5 text-gray-800',
   iconLanguages: 'h-5 w-5 text-gray-800',
   info: 'pl-1 text-xs font-light',
@@ -66,7 +66,7 @@ const Index = ({ data }) => {
         </div>
 
         <div className="px-4 grow text-justify">
-          <p className="leading-relaxed pb-4 font-normal md:text-xl md:text-2xl font-mono">
+          <p className="leading-relaxed pb-2 md:pb-4 font-normal md:text-xl md:text-2xl font-mono">
             Hello world, I'm Matthias!
           </p>
           <p className={style.p}>
@@ -96,7 +96,7 @@ const Index = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex flex-row mt-6 flex-wrap md:flex-nowrap space-y-6 md:space-y-0 md:space-x-6">
+      <div className="flex flex-row mt-4 md:mt-6 flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-4">
         <CategoryBox
           src="projects.jpeg"
           alt="Projects image"
